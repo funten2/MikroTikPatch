@@ -191,7 +191,7 @@ jobs:
         sudo mksquashfs option-root option.sfs -quiet -comp xz -no-xattrs -b 256k
         sudo rm -rf option-root
         if [ "${{ matrix.arch }}" == "x86" ]; then
-          sudo wget -O cpython.tar.zst -nv https://github.com/astral-sh/python-build-standalone/releases/download/20241206/cpython-3.11.11+20241206-x86_64-unknown-linux-musl-install_only_stripped.tar.gz
+          sudo wget -O cpython.tar.gz -nv https://github.com/astral-sh/python-build-standalone/releases/download/20241206/cpython-3.11.11+20241206-x86_64-unknown-linux-musl-install_only_stripped.tar.gz
         elif [ "${{ matrix.arch }}" == "arm64" ]; then
           sudo wget -O cpython.tar.gz -nv https://github.com/indygreg/python-build-standalone/releases/download/20241206/cpython-3.11.11+20241206-aarch64-unknown-linux-gnu-install_only_stripped.tar.gz
         elif [ "${{ matrix.arch }}" == "arm" ]; then
